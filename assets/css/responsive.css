@@ -33,6 +33,9 @@
     .app__content {
         padding-top: 8px;
     }
+    .mobile-category {
+        display: block;
+    }
 }
 
 /* Tablet */
@@ -70,6 +73,16 @@
         animation: mobileSearchSideIn linear 0.3s;
         display: none;
     }
+    @keyframes mobileSearchSideIn {
+        from {
+            opacity: 0;
+            top: calc(var(--header-height) / 2);
+        }
+        to {
+            opacity: 1;
+            top: var(--header-height);
+        }
+    }
     .header__search-history {
         position: fixed;
         width: 100%;
@@ -88,15 +101,10 @@
     .app__content {
         margin: 0 4px;
     }
-
-    @keyframes mobileSearchSideIn {
-        from {
-            opacity: 0;
-            top: calc(var(--header-height) / 2);
-        }
-        to {
-            opacity: 1;
-            top: var(--header-height);
-        }
+    .header__mobile-search {
+        display: block;
+    }
+    .header__logo-img {
+        width: 110px;
     }
 }
